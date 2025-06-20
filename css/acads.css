@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+[data-bs-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #212529;
+  --nav-bg: #f8f9fa;
+  --nav-text: #212529;
+}
+
+[data-bs-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f8f9fa;
+  --nav-bg: #121212;
+  --nav-text: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+  background-color: var(--nav-bg);
+  transition: background-color 0.3s ease;
+}
+
+.navbar a,
+.navbar-brand,
+.navbar-toggler {
+  color: var(--nav-text);
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar-brand:hover {
+  color: #00799a;
+}
+
+/* Match tab text color to current theme */
+[data-bs-theme="light"] .nav-tabs .nav-link {
+  color: var(--text-color);
+}
+
+[data-bs-theme="dark"] .nav-tabs .nav-link {
+  color: var(--text-color);
+}
+
+.nav-tabs {
+  background-color: var(--nav-bg); /* Use theme variable */
+}
+
+.nav-tabs .nav-link {
+  color: var(--nav-text); /* Use theme variable */
+}
+
+.nav-tabs .nav-link.active {
+  background-color: var(--bg-color); /* Use theme variable for active tab */
+  color: var(--text-color);          /* Use theme variable for active tab text */
+}
+.nav-tabs .nav-link:hover {
+  color: #00799a; /* Change hover color for better visibility */
+}
+
+
+/* Card hover effect for all cards */
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15), 0 1.5px 6px rgba(0,0,0,0.10);
+  transform: translateY(-4px) scale(1.03);
+  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+/* Fixed card and image size */
+.card {
+  height: 320px; /* adjust as needed */
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 180px; /* adjust as needed */
+  object-fit: cover;
+  width: 100%;
+}

@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Work</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/acads.css">
+    <link rel="icon" href="media/myfavicon.png" type="image">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Aeon Kenshin</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="acads.html" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Academics
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+  <a class="dropdown-item" href="acads.html#activities">Activities</a>
+  <a class="dropdown-item" href="acads.html#quizzes">Quizzes</a>
+  <a class="dropdown-item" href="acads.html#exams">Exams</a>
+</div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Nav Tabs -->
+  <ul class="nav nav-tabs" id="contentTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="activities-tab" data-bs-toggle="tab" data-bs-target="#activities" type="button" role="tab" aria-controls="activities" aria-selected="true">Activities</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="quizzes-tab" data-bs-toggle="tab" data-bs-target="#quizzes" type="button" role="tab" aria-controls="quizzes" aria-selected="false">Quizzes</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="exams-tab" data-bs-toggle="tab" data-bs-target="#exams" type="button" role="tab" aria-controls="exams" aria-selected="false">Exams</button>
+    </li>
+  </ul>
+
+  <!-- Tab Content -->
+  <div class="tab-content" id="contentTabsContent">
+  <!-- Activities Tab -->
+  <div class="tab-pane fade show active" id="activities" role="tabpanel" aria-labelledby="activities-tab">
+    <div class="container">
+      <h1 class="display-4 mt-5">Activities</h1>
+      <br>
+      <p>This section showcases various tasks and exercises I’ve completed throughout the course. These activities highlight my 
+        learning process, creativity, and hands-on application of skills.</p>
+      <p>Each activity is a step towards mastering the concepts and techniques essential for my academic and professional growth.</p><br>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 activity-card"
+               data-bs-toggle="modal"
+               data-bs-target="#activityImageModal"
+               data-title="Activity 1"
+               data-img="media/activities/act1.jpg"
+               data-desc="In this activity, I explored the basics of HTML and how it's used to build web pages. 
+               I practiced using fundamental tags to structure simple content.">
+            <img class="card-img-top" src="media/activities/act1.jpg" alt="Activity 1">
+            <div class="card-body">
+              <h5 class="card-title">Activity 1</h5>
+              <p class="card-text">Lesson 1: HTML Overview</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 activity-card"
+               data-bs-toggle="modal"
+               data-bs-target="#activityImageModal"
+               data-title="Activity 2"
+               data-img="media/activities/act2.jpg"
+               data-desc="This task focused on the new features and elements introduced in HTML5. 
+               I applied semantic tags like section, article, and footer to create a more meaningful page structure.">
+            <img class="card-img-top" src="media/activities/act2.jpg" alt="Activity 2">
+            <div class="card-body">
+              <h5 class="card-title">Activity 2</h5>
+              <p class="card-text">Lesson 3: HTML 5</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 activity-card"
+               data-bs-toggle="modal"
+               data-bs-target="#activityImageModal"
+               data-title="Activity 3"
+               data-img="media/activities/act3.png"
+               data-desc="Here, I worked with various CSS properties to style HTML elements. 
+               I experimented with colors, fonts, spacing, and borders to improve the visual design of a webpage.">
+            <img class="card-img-top" src="media/activities/act3.png" alt="Activity 3">
+            <div class="card-body">
+              <h5 class="card-title">Activity 3</h5>
+              <p class="card-text">Lesson 5: CSS Property Overview</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 activity-card"
+               data-bs-toggle="modal"
+               data-bs-target="#activityImageModal"
+               data-title="Activity 4"
+               data-img="media/activities/act4.jpg"
+               data-desc="In this activity, I was introduced to the basics of JavaScript. 
+               I wrote simple scripts to make my webpage interactive, such as responding to button clicks and displaying messages.">
+            <img class="card-img-top" src="media/activities/act4.jpg" alt="Activity 4">
+            <div class="card-body">
+              <h5 class="card-title">Activity 4</h5>
+              <p class="card-text">Lesson 9: JavaScript</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quizzes Tab -->
+  <div class="tab-pane fade" id="quizzes" role="tabpanel" aria-labelledby="quizzes-tab">
+    <div class="container">
+      <h1 class="display-4 mt-5">Quizzes</h1>
+      <br>
+      <p>Here you’ll find a collection of quizzes that tested my understanding of individual lessons or topics. 
+        They reflect my progress and retention of key concepts over time.</p>
+      <p>Quizzes are an essential part of my learning journey, helping me identify areas of strength and those needing improvement.</p><br>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 quiz-card" 
+               data-bs-toggle="modal" 
+               data-bs-target="#quizImageModal"
+               data-title="Quiz 1"
+               data-img="media/quiz/QUIZ1.jfif"
+               data-desc="In this quiz, I tested my understanding of what HTML is and 
+               how it structures content on a webpage. 
+               It helped me review common tags and their basic functions.">
+            <img class="card-img-top" src="media/quiz/QUIZ1.jfif" alt="Quiz 1">
+            <div class="card-body">
+              <h5 class="card-title">Quiz 1</h5>
+              <p class="card-text">Lesson 1: HTML Overview</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 quiz-card"
+               data-bs-toggle="modal"
+               data-bs-target="#quizImageModal"
+               data-title="Quiz 2"
+               data-img="media/quiz/QUIZ2.jfif"
+               data-desc="This quiz challenged me to identify and apply the fundamental parts of an HTML document. 
+               I demonstrated my grasp of elements like html, head, and body.">
+            <img class="card-img-top" src="media/quiz/QUIZ2.jfif" alt="Quiz 2">
+            <div class="card-body">
+              <h5 class="card-title">Quiz 2</h5>
+              <p class="card-text">Lesson 2: HTML Basic Structure</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 quiz-card"
+               data-bs-toggle="modal"
+               data-bs-target="#quizImageModal"
+               data-title="Quiz 3"
+               data-img="media/quiz/QUIZ3.jfif"
+               data-desc="Here, I answered questions about various CSS properties used to style HTML elements. 
+               I focused on how to control things like colors, text, and spacing.">
+            <img class="card-img-top" src="media/quiz/QUIZ3.jfif" alt="Quiz 3">
+            <div class="card-body">
+              <h5 class="card-title">Quiz 3</h5>
+              <p class="card-text">Lesson 5: CSS Property Overview</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 quiz-card"
+               data-bs-toggle="modal"
+               data-bs-target="#quizImageModal"
+               data-title="Quiz 4"
+               data-img="media/quiz/QUIZ4.jfif"
+               data-desc="This quiz allowed me to apply what I learned about CSS positioning and layout techniques. 
+               I worked with different position values and explored how layout systems like flexbox affect page structure.">
+            <img class="card-img-top" src="media/quiz/QUIZ4.jfif" alt="Quiz 4">
+            <div class="card-body">
+              <h5 class="card-title">Quiz 4</h5>
+              <p class="card-text">Lesson 6: Positioning and Layout</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 quiz-card"
+               data-bs-toggle="modal"
+               data-bs-target="#quizImageModal"
+               data-title="Quiz 5"
+               data-img="media/quiz/QUIZ5.jfif"
+               data-desc="I tested my understanding of the core concepts and properties in CSS. 
+               This included applying styles that affect element size, spacing, and appearance.">
+            <img class="card-img-top" src="media/quiz/QUIZ5.jfif" alt="Quiz 5">
+            <div class="card-body">
+              <h5 class="card-title">Quiz 5</h5>
+              <p class="card-text">Lesson 7: CSS Basics and Properties</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 quiz-card"
+               data-bs-toggle="modal"
+               data-bs-target="#quizImageModal"
+               data-title="Quiz 6"
+               data-img="media/quiz/QUIZ6.jfif"
+               data-desc="In this quiz, I demonstrated what I learned about making websites adaptable to different screen sizes. 
+               I answered questions on media queries and responsive layout strategies.">
+            <img class="card-img-top" src="media/quiz/QUIZ6.jfif" alt="Quiz 6">
+            <div class="card-body">
+              <h5 class="card-title">Quiz 6</h5>
+              <p class="card-text">Lesson 8: Responsive Web Design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Exams Tab -->
+  <div class="tab-pane fade" id="exams" role="tabpanel" aria-labelledby="exams-tab">
+    <div class="container">
+      <h1 class="display-4 mt-5">Examinations</h1>
+      <br>
+      <p>These are my major exams that evaluated my overall grasp of the subject. 
+        These comprehensive assessments showcase my ability to synthesize and apply what I’ve learned.</p>
+      <p>Exams are a culmination of my efforts, showcasing my readiness to advance in my studies and tackle more complex challenges.</p><br>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 exam-card"
+               data-bs-toggle="modal"
+               data-bs-target="#examImageModal"
+               data-title="Midterm Exam"
+               data-img="media/exams/exam1.png"
+               data-desc="For my midterm exam, I worked on a debugging project. I was given a faulty webpage and tasked with identifying and fixing HTML, and CSS errors. 
+               This activity challenged my problem-solving skills and reinforced my understanding of proper code structure.">
+            <img class="card-img-top" src="media/exams/exam1.png" alt="Midterm Exam">
+            <div class="card-body">
+              <h5 class="card-title">Midterm Exam</h5>
+              <p class="card-text">Debug Website</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 exam-card"
+               data-bs-toggle="modal"
+               data-bs-target="#examImageModal"
+               data-title="Final Exam"
+               data-img="media/exams/exam2.jpg"
+               data-desc="My final exam was the creation of this portfolio website. I applied everything I’ve learned throughout the course—from structuring content with HTML, styling with CSS, to making the site responsive and interactive with JavaScript. 
+               It serves as a reflection of my growth and skills in web development.">
+            <img class="card-img-top" src="media/exams/exam2.jpg" alt="Final Exam">
+            <div class="card-body">
+              <h5 class="card-title">Final Exam</h5>
+              <p class="card-text">Portfolio Website</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+    <footer class="footer-bg text-center mt-5 py-3">
+      <p>&copy; 2025 AKDC97</p>
+      <button type="button" class="btn btn-secondary" id="bd-theme-toggle" aria-label="Toggle theme">
+        <span class="bi" id="bd-theme-icon"></span>
+        Toggle Theme
+      </button>
+    </footer>
+
+    <!-- Modals should be here, after the footer -->
+    <div class="modal fade" id="quizImageModal" tabindex="-1" aria-labelledby="quizImageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="quizImageModalLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="quizModalImg" src="" alt="" class="img-fluid mb-3">
+            <p id="quizModalDesc"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="activityImageModal" tabindex="-1" aria-labelledby="activityImageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="activityImageModalLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="activityModalImg" src="" alt="" class="img-fluid mb-3">
+            <p id="activityModalDesc"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="examImageModal" tabindex="-1" aria-labelledby="examImageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="examImageModalLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="examModalImg" src="" alt="" class="img-fluid mb-3">
+            <p id="examModalDesc"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.js"></script>
+    <script src="js/script.js"></script> 
+    
+</body>
+</html>

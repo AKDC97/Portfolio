@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+[data-bs-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #212529;
+  --nav-bg: #f8f9fa;
+  --nav-text: #212529;
+}
+
+[data-bs-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f8f9fa;
+  --nav-bg: #121212;
+  --nav-text: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+  background-color: var(--nav-bg);
+  transition: background-color 0.3s ease;
+}
+
+.navbar a,
+.navbar-brand,
+.navbar-toggler {
+  color: var(--nav-text);
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar-brand:hover {
+  color: #00799a;
+}
+
+/* Match tab text color to current theme */
+[data-bs-theme="light"] .nav-tabs .nav-link {
+  color: var(--text-color);
+}
+
+[data-bs-theme="dark"] .nav-tabs .nav-link {
+  color: var(--text-color);
+}
+
+.nav-tabs {
+  background-color: var(--nav-bg); /* Use theme variable */
+}
+
+.nav-tabs .nav-link {
+  color: var(--nav-text); /* Use theme variable */
+}
+
+.nav-tabs .nav-link.active {
+  background-color: var(--bg-color); /* Use theme variable for active tab */
+  color: var(--text-color);          /* Use theme variable for active tab text */
+}
+.nav-tabs .nav-link:hover {
+  color: #00799a; /* Change hover color for better visibility */
+}
+
+/* Card hover animation for homepage sections */
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 1.5px 6px rgba(0,0,0,0.12);
+  transform: translateY(-6px) scale(1.03);
+  transition: box-shadow 0.2s, transform 0.2s, background 0.3s, color 0.3s;
+}
+
+/* About Me card: blue theme */
+.card.about-card:hover {
+  background: #0d6efd;
+  color: #fff;
+  border: 2px solid #084298; /* darker blue border */
+}
+.card.about-card:hover .card-title,
+.card.about-card:hover .card-text,
+.card.about-card:hover i {
+  color: #fff;
+  transition: color 0.3s;
+}
+.card.about-card:hover i,
+.card.about-card:hover .btn {
+  color: #fff !important;
+  border-color: #fff !important;
+  background-color: #0d6efd !important;
+} 
+
+/* Academics card: yellow theme */
+.card.acads-card:hover {
+  background: #ffc107;
+  color: #212529;
+  border: 2px solid #b68900; /* darker yellow border */
+}
+.card.acads-card:hover .card-title,
+.card.acads-card:hover .card-text,
+.card.acads-card:hover i {
+  color: #212529;
+  transition: color 0.3s;
+}
+.card.acads-card:hover i,
+.card.acads-card:hover .btn {
+  color: #212529 !important;
+  border-color: #212529 !important;
+  background-color: #ffc107 !important;
+}
+
+/* Contact card: green theme */
+.card.contact-card:hover {
+  background: #198754;
+  color: #fff;
+  border: 2px solid #145c32; /* darker green border */
+}
+.card.contact-card:hover .card-title,
+.card.contact-card:hover .card-text,
+.card.contact-card:hover i {
+  color: #fff;
+  transition: color 0.3s;
+}
+.card.contact-card:hover i,
+.card.contact-card:hover .btn {
+  color: #fff !important;
+  border-color: #fff !important;
+  background-color: #198754 !important;
+}
+
+/* Only change icon color on hover */
+.contact-card:hover .btn-outline-dark i {
+  color: #fff !important;
+}
+
+[data-bs-theme="dark"] .btn-outline-dark i.bi-github {
+  color: #f8f9fa !important;   /* Bootstrap's lightest gray */
+  border-color: #f8f9fa !important;
+}

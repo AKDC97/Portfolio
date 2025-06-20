@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>My Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="media/myfavicon.png" type="image">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Aeon Kenshin</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Academics
+          </a>
+         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="acads.html#activities">Activities</a>
+            <a class="dropdown-item" href="acads.html#quizzes">Quizzes</a>
+            <a class="dropdown-item" href="acads.html#exams">Exams</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Add this just after the navbar -->
+<div class="alert alert-info alert-dismissible fade show mt-4" role="alert">
+  <strong>Welcome!</strong> Thanks for visiting my portfolio. Explore my journey below!
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div class="container mt-5">
+  <h1 class="display-4">Aeon Kenshin F. Dela Cruz</h1>
+  <p>
+    <span class="badge bg-primary">HTML</span>
+    <span class="badge bg-success">CSS</span>
+    <span class="badge bg-warning text-dark">JavaScript</span>
+    <span class="badge bg-info text-dark">Bootstrap</span>
+    <span class="badge bg-secondary">Python</span>
+    <div class="container my-5">
+  <h5 class="mb-3">Learning Journey</h5>
+  <div class="progress" style="height: 25px;">
+    <div class="progress-bar bg-success" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+      60% Complete
+    </div>
+  </div>
+</div>
+  </p>
+  <p>
+    I am a student currently studying Computer Science, with a focus on software development and digital technologies. 
+    My journey into coding began with Java and Python, and has since expanded into web development and responsive design. 
+    This portfolio compiles my academic work, projects, and exams throughout the term, demonstrating both my technical and creative growth.
+  </p>
+  <p>Enjoy and have fun exploring!!!</p>
+</div>
+
+<div class="container mt-5">
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm about-card">
+        <div class="card-body text-center">
+          <i class="bi bi-person display-4 text-primary mb-3"></i>
+          <h3 class="card-title">About Me</h3>
+          <p class="card-text">Want to know more about my background, hobbies, and goals?</p>
+          <a href="about.html" class="btn btn-outline-primary btn-sm mb-2">
+            <i class="bi bi-person"></i> Go to About Page
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm acads-card">
+        <div class="card-body text-center">
+          <i class="bi bi-journal-code display-4 text-warning mb-3"></i>
+          <h3 class="card-title">Academics</h3>
+          <p class="card-text">See my activities, quizzes, and exams from my Computer Science journey.</p>
+          <a href="acads.html" class="btn btn-outline-warning btn-sm mb-2">
+            <i class="bi bi-journal-code"></i> Go to Academics Page
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm contact-card">
+        <div class="card-body text-center">
+          <i class="bi bi-envelope display-4 text-success mb-3"></i>
+          <h3 class="card-title">Reach out</h3>
+          <p class="card-text">Interested in collaborating or have questions?</p>
+          <a href="contact.html" class="btn btn-outline-success btn-sm mb-2">
+            <i class="bi bi-envelope"></i> Go to Contact Page
+          </a>
+          <div class="mt-3">
+            <a href="mailto:aeonkenshin06@gmail.com" class="btn btn-outline-primary btn-sm me-2">
+              <i class="bi bi-envelope"></i>
+            </a>
+            <a href="https://www.facebook.com/aeonkenshin.delacruz/" class="btn btn-outline-primary btn-sm me-2" target="_blank">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://github.com/AKDC97" class="btn btn-outline-dark btn-sm me-2" target="_blank">
+              <i class="bi bi-github text-dark"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="card mt-5">
+        <div class="card-body text-center">
+          <blockquote class="blockquote mb-0">
+            <p class="text-center">"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."</p>
+            <footer class="blockquote-footer text-center">Some person making <cite title="Source Title">some software</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer class="footer-bg text-center mt-5 py-3">
+      <p>&copy; 2025 AKDC97</p>
+      <button type="button" class="btn btn-secondary" id="bd-theme-toggle" aria-label="Toggle theme">
+        <span class="bi" id="bd-theme-icon"></span>
+        Toggle Theme
+      </button>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.js"></script>
+    <script src="js/script.js"></script> 
+</body>
+
+</html>
