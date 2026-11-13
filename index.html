@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aeon Kenshin — Data Analysis &amp; Data Engineer</title>
+  <meta name="description" content="Personal portfolio of Aeon Kenshin — Home, About, Certifications, and Contact. Designed with Neue Montreal and Helvetica Neue.">
+  <meta name="theme-color" content="#08080a" id="meta-theme-color">
+  <meta name="color-scheme" content="dark light">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("portfolio-theme");
+        var theme = saved === "light" || saved === "dark" ? saved : "dark";
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {
+        document.documentElement.dataset.theme = "dark";
+      }
+    })();
+  </script>
+  <meta property="og:title" content="Aeon Kenshin — Data Analysis &amp; Data Engineer">
+  <meta property="og:description" content="Interaction design, motion systems, React architectures, and verified credentials.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2308080a'/%3E%3Crect x='1' y='1' width='30' height='30' rx='7' fill='none' stroke='%2327272a' stroke-width='1.5'/%3E%3Cpath d='M9 21V11l7 6 7-6v10' fill='none' stroke='%23fafafa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://fonts.cdnfonts.com/css/pp-neue-montreal" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <script crossorigin src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js" defer></script>
+  <script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <div class="scroll-progress-track" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+  </div>
+
+  <div class="ambient-canvas" aria-hidden="true">
+    <div class="ambient-glow ambient-glow--top"></div>
+    <div class="ambient-glow ambient-glow--side"></div>
+    <div class="ambient-grid"></div>
+  </div>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+      <a class="brand-mark" href="#home" data-scroll-target="home" aria-label="Aeon Kenshin home">
+        <span class="brand-name">Aeon Kenshin</span>
+      </a>
+
+      <nav class="segmented-nav" aria-label="Primary sections">
+        <div class="segmented-track" id="segmented-track">
+          <span class="segmented-indicator" id="segmented-indicator" aria-hidden="true"></span>
+          <a href="#home" class="segmented-btn is-active" data-scroll-target="home" aria-current="page">Home</a>
+          <a href="#about" class="segmented-btn" data-scroll-target="about">About</a>
+          <a href="#projects-certificates" class="segmented-btn" data-scroll-target="projects-certificates">Certifications</a>
+          <a href="#contact" class="segmented-btn" data-scroll-target="contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="header-status">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode" aria-pressed="false">
+          <span class="theme-toggle-icon" id="theme-toggle-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="theme-toggle-label" id="theme-toggle-label">Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="site-main">
+    <section id="home" class="portfolio-section section-home" aria-labelledby="home-heading">
+      <div class="container">
+        <div class="home-eyebrow reveal">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Aeon Kenshin · Data Analysis &amp; Data Engineer</span>
+          <span class="eyebrow-sep" aria-hidden="true">/</span>
+          <span class="mono-tag">Cavite · Philippines</span>
+        </div>
+
+        <h1 id="home-heading" class="home-title reveal">
+          Clean data, <span class="title-muted"><br>Smarter decisions.</span>
+        </h1>
+
+        <div class="home-bottom-grid reveal">
+          <div class="home-narrative">
+            <p class="home-lead">
+              Transforming messy data into comprehensible insights and driving informed decision-making through experimental analytics solutions.
+            </p>
+            <p class="home-history">
+              Honing skills at <strong>Cavite State University - Bacoor</strong>.
+            </p>
+          </div>
+
+          <div class="home-actions">
+            <a href="#projects-certificates" class="pill-btn pill-btn--solid" data-scroll-target="projects-certificates">
+              <span>Certifications</span>
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3.5 8h9m0 0L9 4.5M12.5 8 9 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <button type="button" class="pill-btn pill-btn--glass" data-copy-email="aeonkenshin06@gmail.com">
+              <span>aeonkenshin06@gmail.com</span>
+              <span class="mono-tag">Copy</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="home-glimpse-strip reveal" aria-label="Practice highlights">
+          <div class="glimpse-cell">
+            <span class="mono-index">Discipline</span>
+            <strong>Data Analysis &amp; Engineering</strong>
+          </div>
+          <div class="glimpse-cell">
+            <span class="mono-index">Architecture</span>
+            <strong>Python · SQL · R</strong>
+          </div>
+          <div class="glimpse-cell">
+            <span class="mono-index">Experience</span>
+            <strong>2+ Years in Data Analysis</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="portfolio-section section-about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="mono-index">01 / About</span>
+          <h2 id="about-heading" class="section-title">
+            Data Analysis &amp; Engineering
+          </h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-story reveal">
+            <p class="about-lead">
+              I am Aeon Kenshin, a multidisciplinary Data Analysis &amp; Data Engineer based in Cavite, Philippines specializing in transforming messy data into comprehensible insights.
+            </p>
+            <p class="about-body">
+              I am well-versed in Python, SQL, and R, and have a strong foundation in data analysis, data visualization, and statistical modeling. I have experience working with large datasets and developing data pipelines to extract, transform, and load data for analysis.
+            </p>
+            <p class="about-body">
+              My approach to data analysis is grounded in a deep understanding of the business context and the ability to communicate insights effectively to stakeholders. I am passionate about using data to drive informed decision-making and improve business outcomes.
+            </p>
+          </div>
+
+          <div class="about-principles reveal">
+            <article class="principle-item">
+              <span class="mono-index">01</span>
+              <div>
+                <h3>Quantitative Automation & Data Analytics</h3>
+                <p>Skilled at building automated Python pipelines and real-time market monitoring systems.</p>
+              </div>
+            </article>
+            <article class="principle-item">
+              <span class="mono-index">02</span>
+              <div>
+                <h3>Data-Driven Decision Making</h3>
+                <p>Proficient in leveraging data insights to inform strategic business decisions and drive growth.</p>
+              </div>
+            </article>
+            <article class="principle-item">
+              <span class="mono-index">03</span>
+              <div>
+                <h3>Hardware Optimization</h3>
+                <p>Experienced in configuring multi-OS environments (Linux/Windows), managing virtualized workspaces, and fine-tuning system thermals and voltage curves for maximum compute stability and efficiency.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="about-ledger reveal" aria-label="Experience timeline">
+          <div class="ledger-header">
+            <span class="mono-index">Experience Ledger</span>
+            <span class="mono-index">2018 — 2026</span>
+          </div>
+          <div class="ledger-row">
+            <span class="ledger-year">2024 — Now</span>
+            <span class="ledger-role">BS Computer Science</span>
+            <span class="ledger-company">Cavite State University - Bacoor</span>
+            <span class="ledger-detail">College Student</span>
+          </div>
+          <div class="ledger-row">
+            <span class="ledger-year">2022 — 2024</span>
+            <span class="ledger-role">TVL-ICT Programming</span>
+            <span class="ledger-company">Informatics College Northgate Alabang</span>
+            <span class="ledger-detail">Senior High School Graduate</span>
+          </div>
+          <div class="ledger-row">
+            <span class="ledger-year">2018 — 2022</span>
+            <span class="ledger-role">High School Graduate</span>
+            <span class="ledger-company">Harrell Horne Integrated School</span>
+            <span class="ledger-detail">High School</span>
+          </div>
+
+        <div class="about-stack-grid reveal" aria-label="Core stack">
+          <div class="stack-card">
+            <span class="mono-index">Full Stack and Desktop</span>
+            <h3>Application Engineering</h3>
+            <p>Java Swing (MVC), MySQL, MongoDB, Polyglot Persistence, REST APIs, Data Serialization, Relational Schema Design, Web Database Portals</p>
+          </div>
+          <div class="stack-card">
+            <span class="mono-index">Data &amp; Algorithms</span>
+            <h3>Python & Market Telemetry</h3>
+            <p>Python, CCXT Integration, SQL Backends, Anomaly Detection, Automated Pipelines, Technical Indicators (EMA, VWAP, RSI), Data Reconciliation</p>
+          </div>
+          <div class="stack-card">
+            <span class="mono-index">Systems &amp; Hardware</span>
+            <h3>OS & Compute Environments</h3>
+            <p>Linux Administration, Windows/Linux Dual-Boot, Virtualization (VMware, UTM), Thermal & Voltage Tuning, Cybersecurity Fundamentals, CAD Take-Offs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects-certificates" class="portfolio-section section-work" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="mono-index">02 / Certifications</span>
+          <h2 id="work-heading" class="section-title">
+            Verified <span class="title-muted"><br> Certificates</span>
+          </h2>
+        </div>
+
+        <div id="work-react-root" class="work-react-root">
+          <div class="fallback-loading">Loading certificates...</div>
+        </div>
+        <noscript>
+          <p class="noscript-note">Enable JavaScript to inspect verified certificates and PDF credential placeholders.</p>
+        </noscript>
+      </div>
+    </section>
+
+    <section id="contact" class="portfolio-section section-contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="mono-index">03 / Contact</span>
+          <h2 id="contact-heading" class="section-title">
+            Let's build something <span class="title-muted"><br>functional and reliable.</span>
+          </h2>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-intro-row reveal">
+            <p class="contact-lead">
+              Currently open to software engineering internships, freelance full-stack projects, and quantitative automation work. Whether you have a technical problem to solve or just want to talk systems, reach out.
+            </p>
+            <div class="contact-actions">
+              <a href="mailto:aeonkenshin06@gmail.com" class="pill-btn pill-btn--solid">
+                <span>Email Aeon</span>
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3.5 8h9m0 0L9 4.5M12.5 8 9 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <button type="button" class="pill-btn pill-btn--glass" data-copy-email="aeonkenshin06@gmail.com">
+                <span>Copy Email</span>
+                <span class="mono-tag">Copy</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="contact-direct-list reveal">
+            <div class="contact-direct-row">
+              <span class="mono-index">Direct Email</span>
+              <button type="button" class="contact-copy-link" data-copy-email="aeonkenshin06@gmail.com">
+                <span>aeonkenshin06@gmail.com</span>
+                <span class="mono-tag">Copy</span>
+              </button>
+            </div>
+            <div class="contact-direct-row">
+              <span class="mono-index">Local Time</span>
+              <span class="contact-value" id="local-clock">Manila · --:-- GMT+8</span>
+            </div>
+            <div class="contact-direct-row">
+              <span class="mono-index">Channels</span>
+              <div class="contact-socials">
+                <a href="https://github.com/AKDC97" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="www.linkedin.com/in/aeon-kenshin-dela-cruz-1148602b9" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.facebook.com/aeon.kenshin" target="_blank" rel="noopener noreferrer">Facebook</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-note">&copy; 2026 Aeon Kenshin. Created in Cavite.</span>
+      <button type="button" class="footer-top-btn" id="scroll-top-btn">Back to top &uarr;</button>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden>
+    <span class="status-dot" aria-hidden="true"></span>
+    <span id="toast-message">Copied to clipboard</span>
+  </div>
+</body>
+</html>
