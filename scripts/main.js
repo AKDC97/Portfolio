@@ -354,12 +354,11 @@
       }
     }
 
-    function CertificateModal({ cert, localPdf, onAttachPdf, onRemovePdf, onClose }) {
+    function CertificateModal({ cert, onClose }) {
       const closeRef = useRef(null);
       const panelRef = useRef(null);
-      const fileInputRef = useRef(null);
 
-      const activePdfUrl = (localPdf && localPdf.url) || cert.pdfPath || "";
+      const activePdfUrl = cert.pdfPath || "";
 
       useEffect(() => {
         const prevFocused = document.activeElement;
@@ -378,18 +377,6 @@
           }
         };
       }, [onClose]);
-
-      function handleFileChange(event) {
-        const file = event.target.files && event.target.files[0];
-        if (!file) return;
-        if (file.type !== "application/pdf" && !file.name.toLowerCase().endsWith(".pdf")) {
-          showToast("Please select a .pdf file");
-          event.target.value = "";
-          return;
-        }
-        onAttachPdf(cert.id, file);
-        event.target.value = "";
-      }
 
       return h(
         "div",
@@ -434,13 +421,6 @@
                 { className: "cert-pdf-header" },
                 h("span", { className: "mono-index" }, "Certificate PDF Document")
               ),
-              h("input", {
-                ref: fileInputRef,
-                type: "file",
-                accept: ".pdf,application/pdf",
-                className: "cert-file-input",
-                onChange: handleFileChange
-              }),
               activePdfUrl
                 ? h(
                     "div",
@@ -462,49 +442,17 @@
                           className: "pill-btn pill-btn--solid"
                         },
                         "Open PDF"
-                      ),
-                      h(
-                        "div",
-                        { className: "cert-pdf-row" },
-                        h(
-                          "button",
-                          {
-                            type: "button",
-                            className: "pill-btn pill-btn--glass",
-                            onClick: () => fileInputRef.current && fileInputRef.current.click()
-                          },
-                          "Replace PDF"
-                        ),
-                        localPdf &&
-                          h(
-                            "button",
-                            {
-                              type: "button",
-                              className: "pill-btn pill-btn--glass",
-                              onClick: () => onRemovePdf(cert.id)
-                            },
-                            "Clear"
-                          )
                       )
                     )
                   )
                 : h(
                     "div",
                     { className: "cert-pdf-placeholder" },
-                    h("span", { className: "cert-pdf-badge" }, "PDF Placeholder"),
+                    h("span", { className: "cert-pdf-badge" }, "PDF Unavailable"),
                     h(
                       "p",
                       null,
-                      `Place your certificate PDF at ${cert.suggestedPdf} and set pdfPath in scripts/main.js for deployment, or attach a local .pdf file now to preview.`
-                    ),
-                    h(
-                      "button",
-                      {
-                        type: "button",
-                        className: "pill-btn pill-btn--glass",
-                        onClick: () => fileInputRef.current && fileInputRef.current.click()
-                      },
-                      "Attach Local PDF"
+                      "No certificate PDF is currently linked for this entry."
                     )
                   )
             ),
@@ -539,44 +487,10 @@
 
     function CertificatesApp() {
       const [modalCertId, setModalCertId] = useState(null);
-      const [localPdfMap, setLocalPdfMap] = useState({});
-      const objectUrlsRef = useRef([]);
-
-      useEffect(() => {
-        return () => {
-          objectUrlsRef.current.forEach((url) => URL.revokeObjectURL(url));
-        };
-      }, []);
 
       const activeModalCert = useMemo(() => {
         return CERTIFICATES.find((c) => c.id === modalCertId) || null;
       }, [modalCertId]);
-
-      function handleAttachPdf(certId, file) {
-        const nextUrl = URL.createObjectURL(file);
-        objectUrlsRef.current.push(nextUrl);
-        setLocalPdfMap((prev) => {
-          if (prev[certId] && prev[certId].url) {
-            URL.revokeObjectURL(prev[certId].url);
-          }
-          return {
-            ...prev,
-            [certId]: { url: nextUrl, name: file.name }
-          };
-        });
-        showToast(`${file.name} attached for preview`);
-      }
-
-      function handleRemovePdf(certId) {
-        setLocalPdfMap((prev) => {
-          if (prev[certId] && prev[certId].url) {
-            URL.revokeObjectURL(prev[certId].url);
-          }
-          const next = { ...prev };
-          delete next[certId];
-          return next;
-        });
-      }
 
       return h(
         window.React.Fragment,
@@ -594,8 +508,7 @@
             "div",
             { className: "cert-grid" },
             CERTIFICATES.map((cert) => {
-              const localPdf = localPdfMap[cert.id];
-              const hasPdf = Boolean((localPdf && localPdf.url) || cert.pdfPath);
+              const hasPdf = Boolean(cert.pdfPath);
               return h(
                 "button",
                 {
@@ -620,7 +533,7 @@
                   "div",
                   { className: "cert-bottom" },
                   h("span", { className: "cert-id" }, cert.credentialId),
-                  h("span", { className: "cert-verify" }, hasPdf ? "View PDF ->" : "Attach PDF ->")
+                  h("span", { className: "cert-verify" }, hasPdf ? "View PDF ->" : "Details ->")
                 )
               );
             })
@@ -629,9 +542,6 @@
         activeModalCert &&
           h(CertificateModal, {
             cert: activeModalCert,
-            localPdf: localPdfMap[activeModalCert.id] || null,
-            onAttachPdf: handleAttachPdf,
-            onRemovePdf: handleRemovePdf,
             onClose: () => setModalCertId(null)
           })
       );
